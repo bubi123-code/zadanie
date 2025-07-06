@@ -1,0 +1,10 @@
+name: Call API with secret
+on: [workflow_dispatch]   # ręczne uruchamianie
+jobs:
+  call:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl with secret
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.MY_SECRET }}" \
+               https://api.example.com/ping
