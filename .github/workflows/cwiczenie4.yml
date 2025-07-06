@@ -1,3 +1,5 @@
+- name: Install dependencies
+    run: pip install -r requirements.txt
 name: Matrix tests
 on: [push]
 jobs:
